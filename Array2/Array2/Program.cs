@@ -104,31 +104,53 @@
 
 //6
 
+int[,] array = {
+{ 33, 64, -10 },
+            { 22, 45, -87 },
+            { 70, -51, 96 }
+        };
+
+for (int i = 0; i < 3; i++)
+{
+    for (int j = 0; j < 3; j++)
+    {
+        if (array[i, j] > 0)
+        {
+            if (array[i, j] % 2 == 0)
+            {
+                array[i, j] = 2;
+            }
+            else
+            {
+                array[i, j] = 1;
+            }
+        }
+        else
+        {
+            if (array[i, j] % 2 == 0)
+            {
+                array[i, j] = -2;
+            }
+            else
+            {
+                array[i, j] = -1;
+            }
+        }
+    }
+}
 
 
-//int[,] array =
-//{
-//            { 1, 3, 5 },
-//            { 2, 6, 6 },
-//            { 7, 0, 9 }
-//};
-//int tek = 1;
-//int cut = 2;
-//for (int i = 0; i < array.GetLength(0); i++)
-//{
-//    for (int j = 0; j < array.GetLength(1); j++)
-//    {
-//        if (array[i, j] % 2 == 0)
-//        {
-//            cut = array[i, j];
-//        }
-//        if (array[i, j] % 2 == 1)
-//        { tek = array[i, j]; }
+for (int i = 0; i < 3; i++)
+{
+    for (int j = 0; j < 3; j++)
+    {
+        Console.Write(array[i, j] + " ");
+    }
+    Console.WriteLine();
+}
 
-//    }
-//    Console.WriteLine("tek");
-//    Console.WriteLine("cut");
-//}
+
+
 
 
 //7
